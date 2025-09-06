@@ -1,9 +1,5 @@
-const puppeteer = require("puppeteer-extra");
-const StealthPlugin = require("puppeteer-extra-plugin-stealth");
+const puppeteer = require("puppeteer");
 const cheerio = require("cheerio");
-
-// Apply the stealth plugin to puppeteer
-puppeteer.use(StealthPlugin());
 
 /**
  * Scrapes a single player's profile, clicks "Load more" repeatedly,
@@ -86,3 +82,4 @@ const scrapeLogic = async (playerID) => {
 };
 
 module.exports = { scrapeLogic };
+
